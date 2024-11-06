@@ -42,3 +42,49 @@
   color: #7d7d7d;
   font-size: 16px;
 }
+
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between; 
+  }
+
+  .logo img {
+    margin-right: 10px; 
+  }
+
+  .search-bar {
+    width: 50%; 
+    padding: 5px; 
+  }
+
+  .search-bar input {
+    padding: 6px; 
+    font-size: 14px; 
+  }
+
+  .search-bar button {
+    font-size: 14px; 
+  }
+}
+
+@media (max-width: 470px) {
+  .navbar {
+    padding: 10px; 
+    flex-wrap: wrap; 
+  }
+
+  .search-bar {
+    width: 100%; 
+    margin-top: 5px; 
+  }
+
+  .search-bar input {
+    padding: 5px; 
+    font-size: 12px; 
+  }
+
+  .search-bar button {
+    font-size: 12px; 
+  }
+}
