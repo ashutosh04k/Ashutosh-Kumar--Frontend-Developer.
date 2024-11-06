@@ -1,20 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import './RestaurantCard.css';
+import { useNavigate } from "react-router-dom";
 
 const RestaurantCard = ({ name, image, rating }) => {
-  // console.log("name",name);
-  
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
+
+  function handleclick() {
+    navigate(`/restaurant/${name}`);
+  }
+
   return (
-    <div className="restaurant-card">
-      <img src={image} alt={name} className="restaurant-image" />
+    <div className="restaurant-card" onClick={handleclick}>
+      {loading && <div className="loading shimmer"></div>}
+      <img
+        src={image}
+        alt={name}
+        className="restaurant-image"
+        style={{ display: loading ? "none" : "block" }}
+        onLoad={() => setLoading(false)}
+      />
       <div className="restaurant-info">
         <h3 className="restaurant-name">{name}</h3>
-        {/* <p className="restaurant-cuisines">{cuisines.join(", ")}</p> */}
         <div className="restaurant-details">
           <span className="restaurant-rating">⭐ {rating}</span>
-          {/* <span className="restaurant-delivery-time">{deliveryTime}</span> */}
         </div>
-        {/* {offer && <div className="restaurant-offer">{offer}</div>} */}
       </div>
     </div>
   );

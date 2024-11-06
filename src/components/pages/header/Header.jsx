@@ -9,7 +9,7 @@ const Header = ({ onSearch }) => {
   const handleInputChange = (event) => {
     const value = event.target.value;
     setQuery(value);
-    onSearch(value); // Call the onSearch function passed as a prop
+    onSearch(value); 
   };
 
   return (

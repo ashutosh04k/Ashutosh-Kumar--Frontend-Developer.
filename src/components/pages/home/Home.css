@@ -13,16 +13,23 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
 }
 
+.banner{
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
 .filter-buttons button {
   background-color: #f5f5f5;
   border: 1px solid #dcdcdc;
   border-radius: 20px;
   padding: 8px 16px;
   font-size: 14px;
-  color: #333;
+  color: #a3542d;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -64,6 +71,45 @@
 }
 
 .pagination button.active {
-  background-color: #1890ff;
+  background-color: #ff5200;
   color: white;
+}
+
+
+.filter-buttons {
+  position: relative; 
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 5px; 
+  border-radius: 4px;
+  width: 150px; 
+  z-index: 1000;
+  max-height: 200px; 
+  overflow-y: auto; 
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 16px; 
 }
